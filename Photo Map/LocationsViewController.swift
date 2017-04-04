@@ -85,7 +85,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         fetchLocations(searchBar.text!)
     }
     
-    func fetchLocations(_ query: String, near: String = "San Francisco") {
+    func fetchLocations(_ query: String, near: String = "Washington DC") {
         let baseUrlString = "https://api.foursquare.com/v2/venues/search?"
         let queryString = "client_id=\(CLIENT_ID)&client_secret=\(CLIENT_SECRET)&v=20141020&near=\(near),CA&query=\(query)"
 
