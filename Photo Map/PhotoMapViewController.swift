@@ -81,7 +81,7 @@ class PhotoMapViewController: UIViewController, UIImagePickerControllerDelegate,
     func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber) {
         
         let annotation = MKPointAnnotation()
-        let locationCoordinate = CLLocationCoordinate2D(latitude: 38.9072, longitude: -77.0369)
+        let locationCoordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
         annotation.coordinate = locationCoordinate
         annotation.title = String(describing: latitude)
         mapView.addAnnotation(annotation)
